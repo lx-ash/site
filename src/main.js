@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
-import App from './pages/App.vue'
-import './tailwind.css'
-createApp(App).mount('#app')
+import App from './App.vue'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
+
+loadFonts()
+
+createApp(App)
+  .use(vuetify)
+  .mount('#app')
